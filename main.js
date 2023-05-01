@@ -29,35 +29,35 @@ keyboardKeys.append(row4);
 const row5 = row.cloneNode(true);
 keyboardKeys.append(row5);
 
-for (let i = 1; i <= 14; i++) {
+for (let i = 1; i <= 14; i ++) {
   const key = document.createElement('div');
   key.classList.add('key');
 
   row.append(key);
 }
 
-for (let i = 1; i <= 14; i++) {
+for (let i = 1; i <= 14; i ++) {
   const key2 = document.createElement('div');
   key2.classList.add('key');
 
   row2.append(key2);
 }
 
-for (let i = 1; i <= 14; i++) {
+for (let i = 1; i <= 14; i ++) {
   const key3 = document.createElement('div');
   key3.classList.add('key');
 
   row3.append(key3);
 }
 
-for (let i = 1; i <= 14; i++) {
+for (let i = 1; i <= 14; i ++) {
   const key4 = document.createElement('div');
   key4.classList.add('key');
 
   row4.append(key4);
 }
 
-for (let i = 1; i <= 14; i++) {
+for (let i = 1; i <= 14; i ++) {
   const key5 = document.createElement('div');
   key5.classList.add('key');
 
