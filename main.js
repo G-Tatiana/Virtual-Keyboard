@@ -14,6 +14,11 @@ text.classList.add('text');
 text.setAttribute('type', 'text')
 document.querySelector('.keyboard_wrapp').after(text);
 
+const osinfo = document.createElement('div');
+osinfo.classList.add('info');
+osinfo.innerHTML = "Клавиатура создана в операционной системе Windows";
+document.querySelector('.keyboard_wrapp').after(osinfo);
+
 const keyboardKeys = document.createElement('div');
 keyboardKeys.classList.add('keyboard_keys');
 wrapp.append(keyboardKeys);

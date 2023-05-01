@@ -38,6 +38,12 @@ body {
     order: 2;
 }
 
+.info {
+    color: #fff;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
 .row,
 .row2,
 .row3,
