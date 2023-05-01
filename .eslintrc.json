@@ -4,6 +4,15 @@
     "rules": {
         "linebreak-style": 0,
         "eslint linebreak-style": [0, "error", "windows"]
+      },
+
+    "globals": {
+        "process": true,
+        "window": true,
+        "console": true,
+        "document": true,
+        "setInterval": true,
+        "setTimeout": true
       }
 }
 

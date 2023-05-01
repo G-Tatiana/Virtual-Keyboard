@@ -18,3 +18,13 @@ body {
     background-size: cover;
     backdrop-filter: blur(7px);
 }
+
+.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 10px;
+    opacity: 0.6;
+}
