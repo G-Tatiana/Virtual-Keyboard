@@ -39,7 +39,8 @@ body {
     order: 2;
 }
 
-.row {
+.row,
+.row2 {
     display: flex;
 }
 
@@ -76,4 +77,12 @@ body {
 
 .backspace_key .symbol__right {
     margin-bottom: 0px;
+}
+
+.tab_key {
+    width: 90px;
+}
+
+.key_del {
+    width: 90px;
 }

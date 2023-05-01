@@ -17,7 +17,8 @@ const row = document.createElement('div');
 row.classList.add('row');
 keyboardKeys.append(row);
 
-const row2 = row.cloneNode(true);
+const row2 = document.createElement('div');
+row2.classList.add('row2');
 keyboardKeys.append(row2);
 
 const row3 = row.cloneNode(true);
@@ -30,18 +31,11 @@ const row5 = row.cloneNode(true);
 keyboardKeys.append(row5);
 
 // for (let i = 1; i <= 14; i ++) {
-//   const key = document.createElement('div');
-//   key.classList.add('key');
+//   const key2 = document.createElement('div');
+//   key2.classList.add('key');
 
-//   row.append(key);
+//   row2.append(key2);
 // }
-
-for (let i = 1; i <= 14; i ++) {
-  const key2 = document.createElement('div');
-  key2.classList.add('key');
-
-  row2.append(key2);
-}
 
 for (let i = 1; i <= 14; i ++) {
   const key3 = document.createElement('div');
@@ -79,5 +73,22 @@ const first = cols[0];
 const last = cols[cols.length - 1];
 
 last.className = 'key backspace_key';
+
+// const rowsList = keyboardKeys.querySelectorAll('.row');
+// const firstRow = rowsList[0];
+// const secondRow = rowsList[rowsList.length - 4];
+
+
+const arrRowSecond = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '&bsol;', 'Del'];
+const secondRow = arrRowSecond.map(i=>`<div class="key">${i}</div>`).join('');
+document.querySelector('.row2').innerHTML = secondRow;
+
+const colsRowSecond = row2.querySelectorAll('.key');
+const firstElementOfRowSecond = colsRowSecond[0];
+const lastElementOfRowSecond = colsRowSecond[colsRowSecond.length - 1];
+
+firstElementOfRowSecond.className = 'key tab_key';
+lastElementOfRowSecond.className = 'key key_del';
+
 
 
