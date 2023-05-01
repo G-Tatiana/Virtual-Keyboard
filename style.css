@@ -32,7 +32,6 @@ body {
 .keyboard_wrapp {
     max-width: 920px;
     width: 100%;
-    /* background-color: none; */
     overflow: hidden;
     position: relative;
     margin-bottom: 50px;
