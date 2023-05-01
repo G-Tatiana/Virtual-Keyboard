@@ -21,30 +21,16 @@ const row2 = document.createElement('div');
 row2.classList.add('row2');
 keyboardKeys.append(row2);
 
-const row3 = row.cloneNode(true);
+const row3 = document.createElement('div');
 row3.classList.add('row3');
 keyboardKeys.append(row3);
 
-const row4 = row.cloneNode(true);
+const row4 = document.createElement('div');
+row4.classList.add('row4');
 keyboardKeys.append(row4);
 
 const row5 = row.cloneNode(true);
 keyboardKeys.append(row5);
-
-
-// for (let i = 1; i <= 14; i ++) {
-//   const key3 = document.createElement('div');
-//   key3.classList.add('key');
-
-//   row3.append(key3);
-// }
-
-for (let i = 1; i <= 14; i ++) {
-  const key4 = document.createElement('div');
-  key4.classList.add('key');
-
-  row4.append(key4);
-}
 
 for (let i = 1; i <= 14; i ++) {
   const key5 = document.createElement('div');
@@ -96,3 +82,15 @@ const lastElementOfRowThird = colsRowThird[colsRowThird.length - 1];
 
 firstElementOfRowThird.className = 'key caps_lock_key';
 lastElementOfRowThird.className = 'key enter_key';
+
+const arrRowFourth = ['Shift', '&bsol;', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '.', ',', '&Prime;', '&sol;', 'ᐃ', 'Shift'];
+const fourthRow = arrRowFourth.map(i=>`<div class="key">${i}</div>`).join('');
+document.querySelector('.row4').innerHTML = fourthRow;
+
+const colsRowFourth = row4.querySelectorAll('.key');
+const firstElementOfRowFourth = colsRowFourth[0];
+const lastElementOfRowFourth = colsRowFourth[colsRowFourth.length - 1];
+
+firstElementOfRowFourth.className = 'key shift_left';
+lastElementOfRowFourth.className = 'key shift_right';
+

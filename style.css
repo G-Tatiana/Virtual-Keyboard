@@ -41,7 +41,8 @@ body {
 
 .row,
 .row2,
-.row3 {
+.row3,
+.row4 {
     display: flex;
 }
 
@@ -95,3 +96,12 @@ body {
 .enter_key {
     width: 120px;
 }
+
+.shift_left {
+    width: 110px;
+}
+
+.shift_right {
+    width: 50px;
+}
+
