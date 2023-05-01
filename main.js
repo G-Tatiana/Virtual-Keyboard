@@ -29,15 +29,9 @@ const row4 = document.createElement('div');
 row4.classList.add('row4');
 keyboardKeys.append(row4);
 
-const row5 = row.cloneNode(true);
+const row5 = document.createElement('div');
+row5.classList.add('row5');
 keyboardKeys.append(row5);
-
-for (let i = 1; i <= 14; i ++) {
-  const key5 = document.createElement('div');
-  key5.classList.add('key');
-
-  row5.append(key5);
-}
 
 ROW1.forEach(function(item){
     let row1 = document.createElement('div');
@@ -94,3 +88,21 @@ const lastElementOfRowFourth = colsRowFourth[colsRowFourth.length - 1];
 firstElementOfRowFourth.className = 'key shift_left';
 lastElementOfRowFourth.className = 'key shift_right';
 
+const arrRowFifth = ['Ctrl', 'Win', 'Alt', '', 'Alt', 'Ctrl', 'ᐊ', 'ᐁ', 'ᐅ'];
+const fifthRow = arrRowFifth.map(i=>`<div class="key">${i}</div>`).join('');
+document.querySelector('.row5').innerHTML = fifthRow;
+
+const colsRowFifth = row5.querySelectorAll('.key');
+const firstElementOfRowFifth = colsRowFifth[0];
+const secondElementOfRowFifth = colsRowFifth[colsRowFifth.length - 8];
+const thirdElementOfRowFifth = colsRowFifth[colsRowFifth.length - 7];
+const fourthElementOfRowFifth = colsRowFifth[colsRowFifth.length - 6];
+const fifthElementOfRowFifth = colsRowFifth[colsRowFifth.length - 5];
+const sixElementOfRowFifth = colsRowFifth[colsRowFifth.length - 4];
+
+firstElementOfRowFifth.className = 'key ctrl_key ctrl_left';
+secondElementOfRowFifth.className = 'key win_key';
+thirdElementOfRowFifth.className = 'key alt_key alt_left';
+fourthElementOfRowFifth.className = 'key space_key';
+fifthElementOfRowFifth.className = 'key alt_key alt_right';
+sixElementOfRowFifth.className = 'key ctrl_key ctrl_right';

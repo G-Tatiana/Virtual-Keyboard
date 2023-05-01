@@ -42,7 +42,8 @@ body {
 .row,
 .row2,
 .row3,
-.row4 {
+.row4,
+.row5 {
     display: flex;
 }
 
@@ -105,3 +106,7 @@ body {
     width: 50px;
 }
 
+.space_key {
+    max-width: 410px;
+    width: 100%;
+}
