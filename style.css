@@ -38,3 +38,7 @@ body {
     margin-bottom: 50px;
     order: 2;
 }
+
+.row {
+    display: flex;
+}
