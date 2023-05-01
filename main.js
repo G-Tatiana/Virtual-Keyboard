@@ -22,6 +22,7 @@ row2.classList.add('row2');
 keyboardKeys.append(row2);
 
 const row3 = row.cloneNode(true);
+row3.classList.add('row3');
 keyboardKeys.append(row3);
 
 const row4 = row.cloneNode(true);
@@ -30,19 +31,13 @@ keyboardKeys.append(row4);
 const row5 = row.cloneNode(true);
 keyboardKeys.append(row5);
 
+
 // for (let i = 1; i <= 14; i ++) {
-//   const key2 = document.createElement('div');
-//   key2.classList.add('key');
+//   const key3 = document.createElement('div');
+//   key3.classList.add('key');
 
-//   row2.append(key2);
+//   row3.append(key3);
 // }
-
-for (let i = 1; i <= 14; i ++) {
-  const key3 = document.createElement('div');
-  key3.classList.add('key');
-
-  row3.append(key3);
-}
 
 for (let i = 1; i <= 14; i ++) {
   const key4 = document.createElement('div');
@@ -91,4 +86,13 @@ firstElementOfRowSecond.className = 'key tab_key';
 lastElementOfRowSecond.className = 'key key_del';
 
 
+const arrRowThird = ['Caps Lock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '&Prime;', 'Enter'];
+const thirdRow = arrRowThird.map(i=>`<div class="key">${i}</div>`).join('');
+document.querySelector('.row3').innerHTML = thirdRow;
 
+const colsRowThird = row3.querySelectorAll('.key');
+const firstElementOfRowThird = colsRowThird[0];
+const lastElementOfRowThird = colsRowThird[colsRowThird.length - 1];
+
+firstElementOfRowThird.className = 'key caps_lock_key';
+lastElementOfRowThird.className = 'key enter_key';

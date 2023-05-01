@@ -40,7 +40,8 @@ body {
 }
 
 .row,
-.row2 {
+.row2,
+.row3 {
     display: flex;
 }
 
@@ -85,4 +86,12 @@ body {
 
 .key_del {
     width: 90px;
+}
+
+.caps_lock_key {
+    width: 128px;
+}
+
+.enter_key {
+    width: 120px;
 }
