@@ -29,12 +29,12 @@ keyboardKeys.append(row4);
 const row5 = row.cloneNode(true);
 keyboardKeys.append(row5);
 
-for (let i = 1; i <= 14; i ++) {
-  const key = document.createElement('div');
-  key.classList.add('key');
+// for (let i = 1; i <= 14; i ++) {
+//   const key = document.createElement('div');
+//   key.classList.add('key');
 
-  row.append(key);
-}
+//   row.append(key);
+// }
 
 for (let i = 1; i <= 14; i ++) {
   const key2 = document.createElement('div');
@@ -63,3 +63,21 @@ for (let i = 1; i <= 14; i ++) {
 
   row5.append(key5);
 }
+
+ROW1.forEach(function(item){
+    let row1 = document.createElement('div');
+    row1.classList.add('key');
+    row1.innerHTML = `
+      <div class="symbol__left">${item[0]}</div>
+      <div class="symbol__right">${item[1]}</div>
+    `
+    document.querySelector('.row').append(row1)
+})
+
+const cols = row.querySelectorAll('.key');
+const first = cols[0];
+const last = cols[cols.length - 1];
+
+last.className = 'key backspace_key';
+
+

@@ -60,3 +60,20 @@ body {
     z-index: 5;
     color: #fff;
 }
+
+.symbol__left {
+    font-size: 10px;
+    align-self: flex-start;
+}
+
+.symbol__right {
+    margin-bottom: 10px;
+}
+
+.backspace_key {
+    width: 120px;
+}
+
+.backspace_key .symbol__right {
+    margin-bottom: 0px;
+}
