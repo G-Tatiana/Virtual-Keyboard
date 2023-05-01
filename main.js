@@ -8,3 +8,7 @@ document.body.prepend(main);
 const wrapp = document.createElement('div');
 wrapp.classList.add('keyboard_wrapp');
 document.querySelector('main').append(wrapp);
+
+const keys = document.createElement('div');
+keys.classList.add('keyboard_keys');
+document.querySelector('div').append(keys);
