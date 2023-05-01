@@ -9,6 +9,11 @@ const wrapp = document.createElement('div');
 wrapp.classList.add('keyboard_wrapp');
 document.querySelector('main').append(wrapp);
 
+const text = document.createElement('input');
+text.classList.add('text');
+text.setAttribute('type', 'text')
+document.querySelector('.keyboard_wrapp').after(text);
+
 const keyboardKeys = document.createElement('div');
 keyboardKeys.classList.add('keyboard_keys');
 wrapp.append(keyboardKeys);
@@ -48,11 +53,6 @@ const first = cols[0];
 const last = cols[cols.length - 1];
 
 last.className = 'key backspace_key';
-
-// const rowsList = keyboardKeys.querySelectorAll('.row');
-// const firstRow = rowsList[0];
-// const secondRow = rowsList[rowsList.length - 4];
-
 
 const arrRowSecond = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '&bsol;', 'Del'];
 const secondRow = arrRowSecond.map(i=>`<div class="key">${i}</div>`).join('');
