@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    transition: .2s;
+}
+
+.body {
+    background-image: url(minimalizm-svyazi-linii-tochki.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(7px);
+}
+
+.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 10px;
+    opacity: 0.6;
+}
+
+.keyboard_wrapp {
+    max-width: 920px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+    order: 2;
+}
+
+.info {
+    color: #fff;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.row,
+.row2,
+.row3,
+.row4,
+.row5 {
+    display: flex;
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    background-color: #033431e5;
+    border-radius: 7px;
+    border: #d3d3f6dc solid 1.5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 6px;
+    transition: .2s;
+    z-index: 5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.symbol__left {
+    font-size: 10px;
+    align-self: flex-start;
+}
+
+.symbol__right {
+    margin-bottom: 10px;
+}
+
+.backspace_key {
+    width: 120px;
+}
+
+.backspace_key .symbol__right {
+    margin-bottom: 0px;
+}
+
+.tab_key {
+    width: 90px;
+}
+
+.key_del {
+    width: 90px;
+}
+
+.caps_lock_key {
+    width: 128px;
+}
+
+.enter_key {
+    width: 120px;
+}
+
+.shift_left {
+    width: 110px;
+}
+
+.shift_right {
+    width: 50px;
+}
+
+.space_key {
+    max-width: 410px;
+    width: 100%;
+}
+
+.text {
+    max-width: 920px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    font-size: 26px;
+    background-color: #033431e5;
+    transition: .2s;
+}
+
+.key:active {
+    background-color: #d3d3f6dc;
+    border:  #033431e5 solid 1.5px;
+    color: #fff;
+    color:  #033431e5;
+    transition: all .4s;
+}
