@@ -1,11 +1,10 @@
 {
     "extends": ["airbnb/base"],
 
-    "rules": {
-        "linebreak-style": 0,
-        "eslint linebreak-style": [0, "error", "windows"],
-        "allowForLoopAfterthoughts": true
-      },
+    // "rules": {
+    //     "linebreak-style": 0,
+    //     "eslint linebreak-style": [0, "error", "windows"]
+    //   },
 
     "globals": {
         "process": true,

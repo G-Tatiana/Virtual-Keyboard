@@ -11,12 +11,12 @@ document.querySelector('main').append(wrapp);
 
 const text = document.createElement('input');
 text.classList.add('text');
-text.setAttribute('type', 'text')
+text.setAttribute('type', 'text');
 document.querySelector('.keyboard_wrapp').after(text);
 
 const osinfo = document.createElement('div');
 osinfo.classList.add('info');
-osinfo.innerHTML = "Клавиатура создана в операционной системе Windows";
+osinfo.innerHTML = 'Клавиатура создана в операционной системе Windows';
 document.querySelector('.keyboard_wrapp').after(osinfo);
 
 const keyboardKeys = document.createElement('div');
@@ -43,24 +43,40 @@ const row5 = document.createElement('div');
 row5.classList.add('row5');
 keyboardKeys.append(row5);
 
-ROW1.forEach(function(item){
-    let row1 = document.createElement('div');
-    row1.classList.add('key');
-    row1.innerHTML = `
+const ROW1 = [
+  ['~', '&grave;'],
+  ['!', '1'],
+  ['@', '2'],
+  ['#', '3'],
+  ['$', '4'],
+  ['%', '5'],
+  [':', '6'],
+  ['?', '7'],
+  ['*', '8'],
+  ['&lbbrk;', '9'],
+  ['&rbbrk;', '0'],
+  ['_', '-'],
+  ['+', '='],
+  ['', 'Backspace'],
+];
+
+ROW1.forEach((item) => {
+  const row1 = document.createElement('div');
+  row1.classList.add('key');
+  row1.innerHTML = `
       <div class="symbol__left">${item[0]}</div>
       <div class="symbol__right">${item[1]}</div>
-    `
-    document.querySelector('.row').append(row1)
-})
+    `;
+  document.querySelector('.row').append(row1);
+});
 
 const cols = row.querySelectorAll('.key');
-const first = cols[0];
 const last = cols[cols.length - 1];
 
 last.className = 'key backspace_key';
 
 const arrRowSecond = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '&bsol;', 'Del'];
-const secondRow = arrRowSecond.map(i=>`<div class="key">${i}</div>`).join('');
+const secondRow = arrRowSecond.map((i) => `<div class="key">${i}</div>`).join('');
 document.querySelector('.row2').innerHTML = secondRow;
 
 const colsRowSecond = row2.querySelectorAll('.key');
@@ -70,9 +86,8 @@ const lastElementOfRowSecond = colsRowSecond[colsRowSecond.length - 1];
 firstElementOfRowSecond.className = 'key tab_key';
 lastElementOfRowSecond.className = 'key key_del';
 
-
 const arrRowThird = ['Caps Lock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '&Prime;', 'Enter'];
-const thirdRow = arrRowThird.map(i=>`<div class="key">${i}</div>`).join('');
+const thirdRow = arrRowThird.map((i) => `<div class="key">${i}</div>`).join('');
 document.querySelector('.row3').innerHTML = thirdRow;
 
 const colsRowThird = row3.querySelectorAll('.key');
@@ -83,7 +98,7 @@ firstElementOfRowThird.className = 'key caps_lock_key';
 lastElementOfRowThird.className = 'key enter_key';
 
 const arrRowFourth = ['Shift', '&bsol;', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '.', ',', '&Prime;', '&sol;', 'ᐃ', 'Shift'];
-const fourthRow = arrRowFourth.map(i=>`<div class="key">${i}</div>`).join('');
+const fourthRow = arrRowFourth.map((i) => `<div class="key">${i}</div>`).join('');
 document.querySelector('.row4').innerHTML = fourthRow;
 
 const colsRowFourth = row4.querySelectorAll('.key');
@@ -94,7 +109,7 @@ firstElementOfRowFourth.className = 'key shift_left';
 lastElementOfRowFourth.className = 'key shift_right';
 
 const arrRowFifth = ['Ctrl', 'Win', 'Alt', '', 'Alt', 'Ctrl', 'ᐊ', 'ᐁ', 'ᐅ'];
-const fifthRow = arrRowFifth.map(i=>`<div class="key">${i}</div>`).join('');
+const fifthRow = arrRowFifth.map((i) => `<div class="key">${i}</div>`).join('');
 document.querySelector('.row5').innerHTML = fifthRow;
 
 const colsRowFifth = row5.querySelectorAll('.key');
